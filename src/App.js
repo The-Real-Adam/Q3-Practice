@@ -21,25 +21,34 @@ class App extends Component {
       this.setState({messages: json})
     }
 
-  async createItem(item) {
+  createMessage = async (message) => {
     const response = await fetch(`${process.env.REACT_APP_API_URL}/messages`, {
       method: 'POST',
-      body: JSON.stringify(item),
+      body: JSON.stringify(message),
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       }
     })
-    const message = await response.json()
-    this.setState({messages: [...this.state.messages, message]})
+    const message1 = await response.json()
+    // console.log('this.state', this.state);
+    this.setState({messages: [...this.state.messages, message1]})
+  }
+
+  deleteMessages = async (message) => {
+    
   }
 
   render() {
     return (
       <div className="App">
         <Toolbar />
-        <AddMessage />
-        <MessageList messages = {this.state.messages} />
+        <MessageList
+        messages = {this.state.messages}
+        deleteMessages ={this.deleteMessages}
+        />
+
+        <AddMessage createMessage = {this.createMessage} />
       </div>
     );
   }

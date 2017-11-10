@@ -6,7 +6,9 @@ const MessageList = ({messages}) => {
   const mappedMessages = messages.map((message) =>
     <Message
     key={message.id}
-    message={message} />
+    message={message}
+    deleteMessages={deleteMessages}
+    />
   )
 
   return (
