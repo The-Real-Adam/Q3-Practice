@@ -11,7 +11,7 @@ const Toolbar = ({messages, seeker, showAll, toggleCompose}) => {
     e.target.search.value = ''
   }
 
-  const totalCount = messages.filter(message => message).length
+  // const totalCount = messages.filter(message => message).length
 
   return(
     <div className="row justify-content-center ">
