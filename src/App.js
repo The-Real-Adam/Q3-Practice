@@ -79,7 +79,7 @@ class App extends Component {
 
 
   toggleCompose() {
-     this.setState({composing: !this.state.AddMessage})
+     this.setState({composing: !this.state.composing})
    }
 
   render() {

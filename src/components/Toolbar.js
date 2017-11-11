@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Toolbar = ({messages, seeker, showAll, toggleCompose}) => {
+
   const searchFor = (e) => {
     e.preventDefault()
     seeker(e.target.value)
@@ -10,18 +11,16 @@ const Toolbar = ({messages, seeker, showAll, toggleCompose}) => {
     e.target.search.value = ''
   }
 
+  const totalCount = messages.filter(message => message).length
+
   return(
-    <div className="row">
-          <div className="col-lg-6">
-            <div className="input-group">
-              <input onChange={ searchFor }  id="search" name="search" type="text" placeholder="SEARCH HERE"></input>
-              <span className="input-group-btn">
-                <button className="btn btn-default" onClick={toggleCompose} type="button" id="compose">Compose</button>
-              </span>
-                {/* <span>{this.state.messages.length}</span> */}
-            </div>
-          </div>
-        </div>
+    <div className="row justify-content-center ">
+      <div className="col align-self-center">
+        <input onChange={ searchFor }  id="search" name="search" type="text" placeholder="SEARCH HERE"></input>
+        <button className="btn btn-default" onClick={toggleCompose} type="button" id="compose">Compose</button>
+        <span></span>
+      </div>
+    </div>
   )
 }
 
