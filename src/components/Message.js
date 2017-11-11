@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Message = ({message}) => {
+const Message = ({message, deleteMessages}) => {
   return (
     <div>
       {message.message}
