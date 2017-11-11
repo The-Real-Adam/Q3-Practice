@@ -89,6 +89,8 @@ class App extends Component {
         <Toolbar
         seeker = {this.seeker.bind(this)}
         toggleCompose = {this.toggleCompose.bind(this)}
+        totalCount = {this.totalCount}
+        messages = {this.state.messages}
         />
 
         {

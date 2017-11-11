@@ -7,5 +7,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+const messages = []
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

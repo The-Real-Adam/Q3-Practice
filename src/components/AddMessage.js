@@ -18,6 +18,7 @@ const AddMessage = ({createMessage}) => {
         <input message='message' placeholder='Message' id="message" />
         <input type='submit' value='Add' />
       </form>
+      <br />
     </div>
   )
 }
